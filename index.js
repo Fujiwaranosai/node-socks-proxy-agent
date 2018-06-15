@@ -131,8 +131,8 @@ SocksProxyAgent.prototype.callback = function connect(req, opts, fn) {
   };
 
   if (proxy.authentication) {
-    options.proxy.authentication = proxy.authentication;
     options.proxy.userId = proxy.userId;
+    options.proxy.password = proxy.authentication.password;
   }
 
   if (proxy.lookup) {
