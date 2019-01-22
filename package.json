@@ -1,5 +1,5 @@
 {
-  "name": "packeto-socks-proxy-agent",
+  "name": "socks-proxy-agent",
   "version": "4.0.2",
   "description": "A SOCKS proxy `http.Agent` implementation for HTTP and HTTPS",
   "main": "./index.js",
