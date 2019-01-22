@@ -115,7 +115,12 @@ SocksProxyAgent.prototype.callback = function connect(req, opts, fn) {
   function onlookup(err, ip) {
     if (err) return fn(err);
     options.destination.host = ip;
-    SocksClient.createConnection(options, onhostconnect);
+	
+	try {
+		SocksClient.createConnection(options, onhostconnect);
+	} catch(error) {
+		fn(error);
+	}
   }
 
   var options = {
